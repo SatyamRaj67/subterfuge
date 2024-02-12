@@ -41,7 +41,7 @@ pub fn check(mut contents: String, current_problem: &Problem) -> bool {
     let file = fs::write(file_path, contents);
 
     match file {
-        Err(err) => {
+        Err(_err) => {
             create_dir_all("dump");
         }
         Ok(_) => {}
